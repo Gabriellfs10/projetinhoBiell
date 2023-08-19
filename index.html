@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carol vc vai ser minha namorada?</title>
+</head>
+
+<body>
+    <div id="conteudo">
+   <h2>
+   vai ser minha namorada?
+   </h2>
+   <button onclick="sim()">
+    SIM
+   </button>
+   <button onmouseover="desvia(this)">NÃO</button>
+    </div>
+    
+</body>
+<style>
+#conteudo{
+
+    background: #3232d3;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    padding: 10px;
+    top: 0;
+    text-align: center;
+}
+</style>
+<script>
+
+function sim(){
+alert("Voce aceitou ser minha namorada futuramente! :)")
+
+}
+
+function desvia(t){
+var btn = t;
+btn.style.position = 'absolute';
+btn.style.bottom = geraPosicao(10,90);
+btn.style.left = geraPosicao(10,90);
+console.log("opa, desviei...");
+}
+
+function geraPosicao(min, max) {
+
+    return (Math.random()* (max - min)+ min) + '%';
+}
+
+</script>
+
+</html>
